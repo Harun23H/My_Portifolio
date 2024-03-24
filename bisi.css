@@ -374,6 +374,8 @@ a {
   padding: 6px 10px;
   box-shadow: 2px 2px 7px #000;
   background-color: #042f3b;
+  border: none;
+  border-radius: 5px;
 }
 
 .col_0002 {
@@ -506,6 +508,7 @@ body,html{
   }
 
   .skill {
+    padding: 10px;
     width: 100%;
     flex-direction: column;
   }
