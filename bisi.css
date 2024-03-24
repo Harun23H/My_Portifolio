@@ -392,6 +392,11 @@ a {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 500px) {
+
+body,html{
+  overflow-x: hidden;
+}
+
   label {
     display: block;
     position: absolute;
@@ -465,6 +470,7 @@ a {
   }
 
   .hero {
+    padding: 10px;
     width: 100%;
   }
 
