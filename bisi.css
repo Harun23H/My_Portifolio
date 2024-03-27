@@ -8,6 +8,10 @@
   font-family: "Inclusive Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #Onlybisi {
   max-width: 100%;
   background-color: #ccc;
@@ -44,7 +48,6 @@ input {
 ul,
 li {
   display: flex;
-  font-size: clamp();
   list-style: none;
   gap: 20px;
   padding: 10px;
@@ -189,6 +192,7 @@ a {
   box-shadow: 2px 2px 6px #000;
   padding-block: 10px;
   padding-inline: 15px;
+  position: relative;
 }
 .inp01 > input,
 .inp02 > input,
@@ -197,6 +201,32 @@ a {
   -webkit-appearance: none;
   width: 100%;
 }
+
+
+.inp01::before, .inp02::before, .inp03::before{
+  content: "90%";
+  height: 100%;
+  font-size: .5em;
+  position: absolute;
+  height: 20px;
+  top: 58%;
+  font-weight: 900;
+  right: 15%;
+}
+
+
+.inp02::before{
+  right: 25%;
+  content: "85%";
+}
+
+.inp03::before{
+  right: 53%;
+  content: "55%";
+}
+
+
+
 
 .range::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -480,22 +510,22 @@ footer {
     width: 100%;
     opacity: 0;
     top: 23%;
+    left: 0;
     flex-direction: column;
     background-color: #375a64;
     position: absolute;
     z-index: 1;
   }
 
-  #toggle:checked + .nav_right {
+  #toggle:checked + .nav_right, .btn{
     opacity: 1;
   }
 
   ul,
   li {
     flex-direction: column;
-    font-size: 1.05em;
-    font-weight: 900;
-    padding: 8px;
+    font-size: 1em;
+    padding: 5px;
     width: 100%;
     padding-top: 20px;
   }
@@ -503,8 +533,7 @@ footer {
   li > a {
     width: 100%;
     text-align: center;
-    border-bottom: solid 4px #fff;
-    background-color: #375a64;
+    border-bottom: solid 1px #fff;
     padding: 5px 0;
     opacity: 0.5;
     cursor: pointer;
@@ -561,6 +590,7 @@ footer {
   .btn {
     width: 100%;
     justify-content: center;
+    align-items: end;
   }
 
   .col_2 {
@@ -595,8 +625,26 @@ footer {
   .inp02,
   .inp03 {
     width: 100%;
-    position: relative;
   }
+
+  .inp01::before, .inp02::before, .inp03::before{
+    top: 43%;
+    right: 20%;
+  }
+  
+  
+  .inp02::before{
+    right: 30%;
+  }
+  
+  .inp03::before{
+    right: 57%;
+  }
+
+
+
+
+
 
   .inp01 > input,
   .inp02 > input,
